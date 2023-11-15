@@ -13,6 +13,7 @@ namespace ConAppRegex
         string email;
         int count;
         string mobile;
+        string customregex;
 
         public void Count() 
         {
@@ -57,11 +58,28 @@ namespace ConAppRegex
             }
 
         }
+
+        public void CustomRegexSearch()
+        {
+            Console.WriteLine("enter your custom regex:");
+            customregex = Console.ReadLine();
+            string pattern3 = @"\d+";
+            Regex regex = new Regex(pattern3);
+            if (regex.IsMatch(customregex))
+            {
+                Console.WriteLine($"Found:{customregex}");
+            }
+            else
+            {
+                Console.WriteLine($"not found:{customregex}");
+            }
+        }
         public void Display()
         {
             Console.WriteLine($"Total {count} words in the sentence/paragraph which you entered is ");
-            Console.WriteLine($"You entere '{email}' this as your email");
-            Console.WriteLine($"You entere this '{mobile}' as your mobile number");
+            Console.WriteLine($"You entered '{email}' this as your email");
+            Console.WriteLine($"You entered this '{mobile}' as your mobile number");
+            Console.WriteLine($"You entered '{customregex}'");
 
 
         }

@@ -14,7 +14,9 @@ namespace ConAppRegex
             c.Count();
             c.Email();
             c.Mobile();
+            c.CustomRegexSearch();
             c.Display();
+            
 
             Console.ReadKey();
         }
